@@ -17,7 +17,7 @@ container_client = blob_service_client.get_container_client(container_name)
 blob_list = [b.name for b in container_client.list_blobs()]
 
 # 各BlobのURLをリストに格納
-url_list = [blob_service_client.get_blob_url(container_name, b) for b in blob_list]
+url_list = [container_client.get_blob_client(blob).url for blob in blob_list]
 
 # 各画像を縦一列に表示
 for url in url_list:
