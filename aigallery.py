@@ -5,7 +5,7 @@ from PIL import Image
 
 # Azure Blob Storageの接続情報
 connect_str = 'DefaultEndpointsProtocol=https;AccountName=aigallery;AccountKey=qyljkC1sn1IrirPS0PsgiocbNitV2Ar7RhA2R4y4Z8SiCOIdlHh5mh5+maR7x8yq8KiaLlvQUwU2+ASt/d2Lfg==;EndpointSuffix=core.windows.net'
-container_name = '<コンテナ名>'
+container_name = 'aigallery'
 
 # BlobServiceClientのインスタンス化
 blob_service_client = BlobServiceClient.from_connection_string(connect_str)
